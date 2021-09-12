@@ -35,4 +35,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-
+    - name: Run coverage
+      run: |
+        coverage run -m --source=. pytest
+        coverage report --fail-under 100
