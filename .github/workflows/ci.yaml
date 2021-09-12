@@ -39,3 +39,6 @@ jobs:
       run: |
         coverage run -m --source=. pytest
         coverage report --fail-under 100
+    - name: Run mypy
+      run: |
+        mypy .
